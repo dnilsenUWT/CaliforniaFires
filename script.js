@@ -14,22 +14,22 @@
 
 	$.getJSON("geojson_data/fire_2000_2009.json",function(data){
     // add GeoJSON layer to the map once the file is loaded
-    var fire2000 = L.geoJson(data, {
+    var geoJSON = L.geoJson(data, {
 			onEachFeature: function( feature, layer ){
         layer.bindPopup( "<strong>" + feature.properties.FIRE_NAME + "</strong>")
       }
 		}).addTo(map);
-		controlLayers.addOverlay(data, "2000-2010");
+		controlLayers.addOverlay(geoJSON, "2000-2010");
 	});
 
 		$.getJSON("geojson_data/fire_1990_1999.json",function(data){
 	    // add GeoJSON layer to the map once the file is loaded
-	    var fire1990 = L.geoJson(data, {
+	    var geoJSON = L.geoJson(data, {
 				onEachFeature: function( feature, layer ){
 	        layer.bindPopup( "<strong>" + feature.properties.FIRE_NAME + "</strong>")
 	      }
 			}).addTo(map);
-			controlLayers.addOverlay(data, "1990-1999");
+			controlLayers.addOverlay(geoJSON, "1990-1999");
 		});
 
 
