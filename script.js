@@ -28,7 +28,7 @@
 			onEachFeature: function( feature, layer ){
 				layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
       }
-		}).addTo(map);
+		});
 		controlLayers.addOverlay(fire2000, "2000-2009");
 	});
 
@@ -38,7 +38,7 @@
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 	      }
-			}).addTo(map);
+			});
 			controlLayers.addOverlay(fire1990, "1990-1999");
 		});
 
@@ -48,7 +48,7 @@
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 	      }
-			}).addTo(map);
+			});
 			controlLayers.addOverlay(fire1980, "1980-1989");
 		});
 
@@ -58,7 +58,7 @@
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
-			}).addTo(map);
+			});
 			controlLayers.addOverlay(fire1970, "1970-1979");
 		});
 
@@ -68,7 +68,7 @@
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
-			}).addTo(map);
+			});
 			controlLayers.addOverlay(fire1960, "1960-1969");
 		});
 
@@ -78,7 +78,7 @@
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
-			}).addTo(map);
+			});
 			controlLayers.addOverlay(fire1950, "1950-1959");
 		});
 
@@ -88,7 +88,7 @@
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
-			}).addTo(map);
+			});
 			controlLayers.addOverlay(fire1940, "1940-1949");
 		});
 
@@ -98,7 +98,7 @@
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
-			}).addTo(map);
+			});
 			controlLayers.addOverlay(fire1930, "1930-1939");
 		});
 
@@ -108,7 +108,7 @@
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
-			}).addTo(map);
+			});
 			controlLayers.addOverlay(fire1920, "1920-1929");
 		});
 
@@ -118,7 +118,7 @@
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
-			}).addTo(map);
+			});
 			controlLayers.addOverlay(fire1910, "1910-1919");
 		});
 
@@ -128,7 +128,7 @@
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
-			}).addTo(map);
+			});
 			controlLayers.addOverlay(fire1900, "1900-1909");
 		});
 	// var overlays = {
