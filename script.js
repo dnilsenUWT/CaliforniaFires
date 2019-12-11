@@ -1,5 +1,6 @@
 
-	var map = L.map('map').setView([37.78, -120.36], 6);
+	var map = L.map('map').setView([37.78, -120.36], 7);
+
 
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZG5pbHNlbiIsImEiOiJjazIzeHFyd3kwMm03M25rNGkyNnJuODFjIn0.THS8KaBhpFTcgWOjMpp6_g', {
 		maxZoom: 18,
@@ -10,9 +11,13 @@
 	}).addTo(map);
 
 
+
+
 	var controlLayers = L.control.layers(null, undefined,
 	{"sortLayers":true}).addTo(map);
-	
+
+
+
 	$.getJSON("geojson_data/fire_2010_2018.json",function(data){
     // add GeoJSON layer to the map once the file is loaded
     var fire2010 = L.geoJson(data, {
@@ -132,6 +137,8 @@
 			});
 			controlLayers.addOverlay(fire1900, "1900-1909");
 		});
+
+
 	// var overlays = {
 	// 	"2000-2010": fire2000,
 	// 	"1990-1999": fire1999,
