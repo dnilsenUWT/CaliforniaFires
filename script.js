@@ -20,10 +20,12 @@
 
 	$.getJSON("geojson_data/fire_2010_2018.json",function(data){
     // add GeoJSON layer to the map once the file is loaded
-    var fire2010 = L.geoJson(data, {
+
+		var fire2010 = L.geoJson(data, {
 			onEachFeature: function( feature, layer ){
 				layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
       }
+
 		}).addTo(map);
 		controlLayers.addOverlay(fire2010, "2010-2018");
 	});
