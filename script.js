@@ -6,12 +6,13 @@
 		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
 			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		id: 'mapbox/dark-v10' 
+		id: 'mapbox/dark-v10'
 	}).addTo(map);
 
 
-	var controlLayers = L.control.layers().addTo(map);
-
+	var controlLayers = L.control.layers(null, undefined,
+	{"sortLayers":true}).addTo(map);
+	
 	$.getJSON("geojson_data/fire_2010_2018.json",function(data){
     // add GeoJSON layer to the map once the file is loaded
     var fire2010 = L.geoJson(data, {
