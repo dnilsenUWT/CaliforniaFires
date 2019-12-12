@@ -16,12 +16,21 @@
 	var controlLayers = L.control.layers(null, undefined,
 	{"sortLayers":true}).addTo(map);
 
+	L.control.defaultExtent()
+
+.addTo(map);
+
+
 
 
 	$.getJSON("geojson_data/fire_2010_2018.json",function(data){
     // add GeoJSON layer to the map once the file is loaded
 
 		var fire2010 = L.geoJson(data, {
+			style: function(feature){
+						var fillColor = "#7f2704";
+						return { weight: 0, fillColor: fillColor, fillOpacity: 1 };
+					},
 			onEachFeature: function( feature, layer ){
 				layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
       }
@@ -33,6 +42,10 @@
 	$.getJSON("geojson_data/fire_2000_2009.json",function(data){
     // add GeoJSON layer to the map once the file is loaded
     var fire2000 = L.geoJson(data, {
+			style: function(feature){
+						var fillColor = "#a63603";
+						return { weight: 0, fillColor: fillColor, fillOpacity: 1 };
+					},
 			onEachFeature: function( feature, layer ){
 				layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
       }
@@ -43,6 +56,10 @@
 		$.getJSON("geojson_data/fire_1990_1999.json",function(data){
 	    // add GeoJSON layer to the map once the file is loaded
 	    var fire1990 = L.geoJson(data, {
+				style: function(feature){
+							var fillColor = "#d94801";
+							return { weight: 0, fillColor: fillColor, fillOpacity: 1 };
+						},
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 	      }
@@ -53,6 +70,10 @@
 		$.getJSON("geojson_data/fire_1980_1989.json",function(data){
 	    // add GeoJSON layer to the map once the file is loaded
 	    var fire1980 = L.geoJson(data, {
+				style: function(feature){
+							var fillColor = "#f16913";
+							return { weight: 0, fillColor: fillColor, fillOpacity: 1 };
+						},
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 	      }
@@ -63,6 +84,10 @@
 		$.getJSON("geojson_data/fire_1970_1979.json",function(data){
 			// add GeoJSON layer to the map once the file is loaded
 			var fire1970 = L.geoJson(data, {
+				style: function(feature){
+							var fillColor = "#fd8d3c";
+							return { weight: 0, fillColor: fillColor, fillOpacity: 1 };
+						},
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
@@ -73,6 +98,10 @@
 		$.getJSON("geojson_data/fire_1960_1969.json",function(data){
 			// add GeoJSON layer to the map once the file is loaded
 			var fire1960 = L.geoJson(data, {
+				style: function(feature){
+							var fillColor = "#fdae6b";
+							return { weight: 0, fillColor: fillColor, fillOpacity: 1 };
+						},
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
@@ -83,6 +112,10 @@
 		$.getJSON("geojson_data/fire_1950_1959.json",function(data){
 			// add GeoJSON layer to the map once the file is loaded
 			var fire1950 = L.geoJson(data, {
+				style: function(feature){
+							var fillColor = "#fdd0a2";
+							return { weight: 0, fillColor: fillColor, fillOpacity: 1 };
+						},
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
@@ -93,6 +126,10 @@
 		$.getJSON("geojson_data/fire_1940_1949.json",function(data){
 			// add GeoJSON layer to the map once the file is loaded
 			var fire1940 = L.geoJson(data, {
+				style: function(feature){
+							var fillColor = "#fee6ce";
+							return { weight: 0, fillColor: fillColor, fillOpacity: 1 };
+						},
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
@@ -103,6 +140,10 @@
 		$.getJSON("geojson_data/fire_1930_1939.json",function(data){
 			// add GeoJSON layer to the map once the file is loaded
 			var fire1930 = L.geoJson(data, {
+				style: function(feature){
+							var fillColor = "#fff5eb";
+							return { weight: 0, fillColor: fillColor, fillOpacity: 1 };
+						},
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
@@ -113,6 +154,10 @@
 		$.getJSON("geojson_data/fire_1920_1929.json",function(data){
 			// add GeoJSON layer to the map once the file is loaded
 			var fire1920 = L.geoJson(data, {
+				style: function(feature){
+							var fillColor = "#fed976";
+							return { weight: 0, fillColor: fillColor, fillOpacity: 1 };
+						},
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
@@ -123,6 +168,10 @@
 		$.getJSON("geojson_data/fire_1910_1919.json",function(data){
 			// add GeoJSON layer to the map once the file is loaded
 			var fire1910 = L.geoJson(data, {
+				style: function(feature){
+							var fillColor = "#ffeda0";
+							return { weight: 0, fillColor: fillColor, fillOpacity: 1 };
+						},
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}
@@ -133,6 +182,10 @@
 		$.getJSON("geojson_data/fire_1900_1909.json",function(data){
 			// add GeoJSON layer to the map once the file is loaded
 			var fire1900 = L.geoJson(data, {
+				style: function(feature){
+							var fillColor = "#ffffcc";
+							return { weight: 0, fillColor: fillColor, fillOpacity: 1 };
+						},
 				onEachFeature: function( feature, layer ){
 					layer.bindPopup( "Fire Name: " + "<strong>" + feature.properties.FIRE_NAME + "</strong><br/>" + "Year: " + feature.properties.YEAR_)
 				}

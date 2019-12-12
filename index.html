@@ -8,7 +8,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
 	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
@@ -16,18 +16,33 @@
 	<link rel="stylesheet" href="styles.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+	<link rel="stylesheet" href="Leaflet.defaultextent-master\dist\leaflet.defaultextent.css" />
+	<script src="Leaflet.defaultextent-master\dist\leaflet.defaultextent.js"></script>
+
 </head>
 <body>
 
-	<header>
-  <h2>California Wildfires</h2><p>1990 to 2018</p></header>
+	<header><div class="imgh">
+		<img src="images/_J9A7563-4.jpg" alt="Chart of Acers Burned in California">
+	</div>
+	</header>
+
 <section>
 		<nav>
 			<div id="map"></div>
 		</nav>
 
 		<article>
-			<p>Need to fill this section with some sort of info about California Fires</p>
+			<h2>California Wildfires</h2>
+			<p>California has become the focus point when it comes to wildfires with the recent disasters as the Mendocino Complex (2018), Thomas Fire (2017), and Camp Fire (2018). These fires have brought devastation to many areas and have been showing a growing trend in larger fires. This issue of more frequent large wildfires is a subject that is currently being addressed by Federal, State, and local governments.</p>
+			<p>These maps show the historical record of the documented fires in California ranging from 1900 through 2018. The top map shows each individual fires in a ten year span with the name of the fire and year. The bottom map shows the locations of all the fires from 1900-2018 compared to all the prescribed fires within the same years.</p>
+			<p>Since 1900 there has been:</p>
+			<p>35,556,522acers have been burned due to wildfires since 1900 through 2018.</p>
+			<p>1,615,960 acers have been burned due to prescribed fires since 1900 through 2018.</p>
+			<div class="img">
+				<img src="images\total_acres_burned.svg" alt="Chart of Acers Burned in California by Year"
+			</div>
+
 		</article>
 </section>
 <br>
@@ -37,7 +52,21 @@
 		</nav>
 
 		<article>
-			<p>Need to fill this section with some sort of info about California Fires</p>
+			<h2>Prescribed Fires</h2>
+			<p>Historically the forests were intentionally set on fire by Native Americans to burn out the lower vegetation to promote growth of edible vegetation and encourage growth of plant species that are required from the production of goods such as baskets. (Anderson 2006.) This practice began to diminish during the late 1800’s as populations began to expand throughout California. Fires that began naturally through lighting were allowed to burn as long as the threat level to inhabited areas and structures was low.</p>
+			<p>These practices of allowing natural fires to burn then came to a halt in 1905, with the creation of the Forest Service. The mission of this newly created agency was to suppress all fires within their jurisdictions. (Wagtendonk, 2007).&nbsp;The next six decades focused on the complete suppression of fires, with some experimentation in letting fires that meet certain requirements to burn. The end result of this fire suppression regime led to forests that were crowded and held a great potential to be fuels in larger wildfires. Evidence of this can be seen in the increase frequency of larger wildfires. While other factors are included in the increase of larger fires, the increase in forest biomass can be trace its lineage to the strict fire suppression policy of the first half of the 20<sup>th</sup> century.</p>
+			<p>Today prescribed fires are being used to reduce fuels in an attempt to reduce the frequency of larger wildfires. These prescribed fires must meet a list of requirments and permits as populations have become more concerned with air quality from the smoke, environmental impacts, and the risk that these prescribed fires could get loose and turn into larger fires. While it is considered a natural process to have wildfires, there are a growing set of alternatives in reducing the fuels that are being explored.</p>
+			<div class="img">
+				<img src="images/acers_burned.PNG" alt="Chart of Acers Burned in California">
+			</div>
+			<references>
+				<p>References:</p>
+				<p>Anderson, M.K. &nbsp; 2006. &nbsp;The use of fire by Native Americans in California. Pages 417-430 in: N.G. Sugihara, J.W. van Wagtendonk, J. Fites-Kaufman, K.E. Shaffer, and A.E. Thode, editors. &nbsp;Fire in California’s ecosystems. &nbsp;University of California Press, Berkeley, California, USA.</p>
+				<p>Wagtendonk, J. W. V. (2007). The History and Evolution of Wildland Fire Use. Fire Ecology, 3(2), 3–17. doi: 10.4996/fireecology.0302003</p>
+				<p>GIS Data:</p>
+				<p>USDA Forest Service Region 5, USDI Bureau of Land Management, National Park Service, National Fish and Wildlife Service, &amp; CA. Local Agencies. (2018). Geodatabase. Sacramento.;
+  			<a href="https://frap.fire.ca.gov/media/2525/fire18_1.zip">https://frap.fire.ca.gov/media/2525/fire18_1.zip</a>&nbsp;
+			</references>
 		</article>
 </section>
 

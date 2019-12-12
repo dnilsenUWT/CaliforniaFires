@@ -16,15 +16,20 @@
 
 
 	var controlLayers2 = L.control.layers(
-		
+
 	).addTo(map2);
+
+	L.control.defaultExtent()
+
+.addTo(map2);
+
 
 		// Map 2
 		$.getJSON("geojson_data/prescribed.json",function(data){
 			// add GeoJSON layer to the map once the file is loaded
 			var prescribed = L.geoJson(data, {
 				style: function(feature){
-				      var fillColor = "yellow";
+				      var fillColor = "#feb24c";
 							return { weight: 0, fillColor: fillColor, fillOpacity: 1 };
 						}
 			}).addTo(map2);
@@ -35,7 +40,7 @@
 	    // add GeoJSON layer to the map once the file is loaded
 	    var allfire = L.geoJson(data, {
 				style: function(feature){
-							var fillColor = "red";
+							var fillColor = "#f03b20";
 							return { weight: 0, fillColor: fillColor, fillOpacity: 1 };
 						}
 			}).addTo(map2);
